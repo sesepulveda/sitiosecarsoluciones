@@ -1,0 +1,7 @@
+﻿
+window.onload = function () {
+
+
+};
+
+

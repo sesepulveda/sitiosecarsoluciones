@@ -1,0 +1,743 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @if (ViewBag.Produccion == 1)
+    {
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55339847-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-55339847-3');
+        </script>
+    }
+
+
+    <script src="~/js/home.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Desarrollo de software hosting  | secar soluciones Chile </title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <link href="~/img/logo_200_100.png" rel="icon">
+    <link href="~/img/logo_200_100.png" rel="logo_200_100">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+
+
+    <!-- =======================================================
+    * Template Name: Mamba - v2.0.1
+    * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body>
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-none d-lg-block">
+        <div class="container clearfix">
+            <div class="contact-info float-left">
+                <a href="mailto:secarsoluciones@secarsoluciones.cl"><i class="icofont-envelope"></i>secarsoluciones@secarsoluciones.cl</a>
+                <a href="https://api.whatsapp.com/send?phone=56948995377"><i class="icofont-brand-whatsapp"></i> +56 9 489 953 77</a>
+            </div>
+            <div class="social-links float-right">                
+                <a href="javascript:mensaje('Alerta', 'Funcionalidad no disponible');" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="javascript:mensaje('Alerta', 'Funcionalidad no disponible');" class="instagram"><i class="icofont-instagram"></i></a>  
+                <a href="https://api.whatsapp.com/send?phone=56948995377"><i class="icofont-brand-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header-scrolled">
+        <div class="container">
+
+            <div class="logo float-left">
+                <!--<h1 class="text-light"><a href="index.html"><span>Mamba</span></a></h1>
+                Uncomment below if you prefer to use an image logo -->
+                <a href="#about">
+                    <img src="~/img/logo_415_209.png" class="img-fluid" alt="" />
+                </a>
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header">Inicio</a></li>
+                    <li><a href="#about">Nuestra Empresa</a></li>
+                    <li><a href="#about-lists">Tecnolog&iacute;a</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#team">Pro-Pyme</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="javascript:PagoCliente()">Pago de suscripciones</a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="background-image: url('../../img/slide/slide-1.jpg');">
+                        <img src="~/img/slide/slide-1.jpg" />
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">outsourcing | <span>capital humano</span></h2>
+                                <p class="animated fadeInUp">
+                                    Contamos con personal multidisciplinario para el desarrollo de tus proyectos inform&aacute;ticos. 
+                                    Con nosotros podr&aacute;s llevar acabo tus proyectos de forma r&aacute;pida y eficaz. Trabajando de una 
+                                    forma cercana, accesible y de la mano con nuestros clientes siendo un apoyo relevante desde 
+                                    el inicio de tus ideas y el desarrollo de estas.
+                                </p>
+                                <a href="#services" class="btn-get-started animated fadeInUp scrollto">M&aacute;s informaci&oacute;n</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="background-image: url('../../img/slide/slide-2.jpg');">
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">Proyectos llave en mano</h2>
+                                <p class="animated fadeInUp">
+                                    Desarrollamos tus ideas, nosotros te apoyamos desde el inicio del proyecto, entregando un producto sin preocupaciones 
+                                    en la administraci&oacute;n contando con profesionales excelente en el &aacute;rea , con informaci&oacute;n peri&oacute;dica del desarrollo 
+                                    asegurando el cumplimiento de tus necesidades
+                                </p>
+                                <a href="#services" class="btn-get-started animated fadeInUp scrollto">M&aacute;s Informaci&oacute;n</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item" style="background-image: url('../../img/slide/slide-3.jpg');">
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">Equipo de desarrollo &aacute;gil</h2>
+                                <p class="animated fadeInUp">
+                                    Contamos con un equipo completo para el desarrollo de tus productos en las dependencias de nuestros Clientes, 
+                                    bajo una metodolog&iacute;a &aacute;gil. Con esta metodolog&iacute;a desarrollamos las necesidades que Ud. Tenga de manera incremental, 
+                                    entregando soluciones a tus problemas de forma r&aacute;pida y eficaz.
+                                </p>
+                                <a href="#services" class="btn-get-started animated fadeInUp scrollto">M&aacute;s Informaci&oacute;n</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+                    <span class="sr-only">Pr&Oacute;ximo</span>
+                </a>
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="row no-gutters">
+                    <div class="col-lg-6 video-box">
+                        <img src="~/img/about.jpg" class="img-fluid" alt="">
+                        @*<a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>*@
+                    </div>
+
+                    <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+                        <div class="section-title">
+                            <h2>Sobre Nosotros</h2>
+                            <p>
+                                Somos una empresa de servicio, buscamos crear una alianza estrat&eacute;gica con nuestros clientes, con
+                                la finalidad de poder entender, comprender y ser una verdadera soluci&oacute;n a tus requerimientos.
+                            </p>
+                        </div>
+
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                            <h4 class="title"><a href="">Confiabilidad</a></h4>
+                            <p class="description">
+                                Nos involucramos en las necesidades de nuestros clientes, siendo un apoyo real a tus requerimientos, entregando
+                                una visi&oacute;n global a las soluciones que necesitan.
+                            </p>
+                        </div>
+
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="bx bx-gift"></i></div>
+                            <h4 class="title"><a href="">Empat&iacute;a</a></h4>
+                            <p class="description">Nos transformamos en parte de su empresa para as&iacute; poder estar a su lado otorgando soluciones eficaces a tus necesidades.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Us Section -->
+        <!-- ======= About Lists Section ======= -->
+        <section id="about-lists" class="about-lists">
+            <div class="container">
+
+                <div class="row no-gutters">
+
+                    <div class="col-lg-4 col-md-6 content-item text-center" data-aos="fade-up">
+                        <img src="~/img/netframework.png" class="img-fluid" style="max-width: 180px" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item text-center" data-aos="fade-up" data-aos-delay="100">
+                        <img src="~/img/angular.png" class="img-fluid" style="max-width: 180px" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="~/img/sqlServer.png" class="img-fluid" style="max-width: 180px" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item text-center" data-aos="fade-up" data-aos-delay="300">
+                        <img src="~/img/docker.png" class="img-fluid" style="max-width: 180px" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item text-center" data-aos="fade-up" data-aos-delay="400">
+                        <img src="~/img/api.png" class="img-fluid" style="max-width: 180px" />
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item text-center" data-aos="fade-up" data-aos-delay="500">
+                        <img src="~/img/oracle.png" class="img-fluid" style="max-width: 180px" />
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End About Lists Section -->
+        <!-- ======= Counts Section ======= -->
+        <!-- End Counts Section -->
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Nuestros Servicios</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+                        <div class="icon"><i class="icofont-computer"></i></div>
+                        <h4 class="title"><a href="">Outsourcing</a></h4>
+                        <p class="description">
+                            Servicios de desarrollo, que te permitir&aacute;n concentrarte en tu negocio delegando tareas a profesionales TI expertos en las
+                            dependencias de tu empresa. Entregamos un valor agregado a tu negocio.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+                        <h4 class="title"><a href="">Desarrollo a medida</a></h4>
+                        <p class="description">
+                            Desarrollamos su producto de forma íntegra, realizando el levantamiento inicial, haciendo participe a su equipo de negocio de
+                            forma peri&oacute;dica hasta la puesta en producci&oacute;n.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="icofont-earth"></i></div>
+                        <h4 class="title"><a href="">C&eacute;lulas de Trabajo colaborativo</a></h4>
+                        <p class="description">
+                            Conformamos c&eacute;lulas de trabajo colaborativo con personal multidisciplinario  TI, para el desarrollo de tus productos con entregas peri&oacute;dicas e
+                            incrementales entregando a la organizaci&oacute;n MVP (M&iacute;nimo producto viable).
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                        &nbsp;
+                        @*<div class="icon"><i class="icofont-image"></i></div>
+                            <h4 class="title"><a href="">Magni Dolores</a></h4>
+                            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>*@
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                        &nbsp;
+                        @*<div class="icon"><i class="icofont-settings"></i></div>
+                            <h4 class="title"><a href="">Nemo Enim</a></h4>
+                            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>*@
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                        &nbsp;
+                        @*<div class="icon"><i class="icofont-tasks-alt"></i></div>
+                            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+                            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>*@
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+        <!-- ======= Our Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Aplicaciones Pro-Pymes</h2>
+                    <p>
+                        Soluciones para la pymes que no pueden contar con herramientas de software, nosotros pensamos en ellos
+                        ofreciendo las siguientes opciones.
+                    </p>
+                </div>
+                <section class="counts section-bg">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+                                <div class="count-box">
+                                    <i class="icofont-web" style="color: #20b38e;"></i></i>
+                                    <h3>Sitios Corporativos</h3>
+                                    <p>Desarrollamos sitios web corporativos, contamos con hosting y servidor de correo.</p>
+                                    <br />
+                                    
+                                        <p>Disponible desde 1.5 UF</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                                <div class="count-box">
+                                    <i class="icofont-gym" style="color: #20b38e;"></i></i>
+                                    <h3>Gesti&oacute;n deportiva</h3>
+                                    <p>Administre su gimnasio, clases o canchas, con un control total de su actividad.</p>
+                                    <br />
+                                    <p>Junio 2020</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                                <div class="count-box">
+                                    <i class="icofont-architecture-alt" style="color: #20b38e;"></i></i>
+                                    <h3>Gesti&oacute;n Proyectos</h3>
+                                    <p>Software administra tus proyectos de forma clara, obteniendo todo el control.</p>
+                                    <br />
+                                    <p>Junio 2020</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+                                <div class="count-box">
+                                    <i class="icofont-send-mail" style="color: #20b38e;"></i></i>
+                                    <h3>Gesti&oacute;n Campañas</h3>
+                                    <p>Envie campañas de mail a tus clientes con infromaci&oacute;n de su negocio.</p>
+                                    <br />
+                                    <p>Agosto 2020</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+                                <div class="count-box">
+                                    <i class="icofont-attachment" style="color: #20b38e;"></i></i>
+                                    <h3>Generador de encuestas</h3>
+                                    <p>¿Sabe lo que piensan tus clientes o necesitan? Ahora podr&aacute; saberlo.</p>
+                                    <br />
+                                    <p>Agosto 2020</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                                <div class="count-box">
+                                    <i class="icofont-gym" style="color: #20b38e;"></i></i>
+                                    <h3>Administraci&oacute;n de Inmuebles</h3>
+                                    <p>Administre su condominio conectado con la comunidad.</p>
+                                    <br />
+                                    <p>Septiembre 2020</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                                <div class="count-box">
+                                    <i class="icofont-architecture-alt" style="color: #20b38e;"></i></i>
+                                    <h3>Gesti&oacute;n de casos</h3>
+                                    <p>Administre las solicitudes internas como la de los clientes de su negocio.</p>
+                                    <br />
+                                    <p>Octubre 2020</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+                                <div class="count-box">
+                                    <i class="icofont-group-students" style="color: #20b38e;"></i></i>
+                                    <h3>Gesti&oacute;n Educacional</h3>
+                                    <p>Gestione su colegio de forma digital, mejorando la comunicaci&oacute;n.</p>
+                                    <br />
+                                    <p>Diciembre 2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- End Our Team Section -->
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <!--<section id="faq" class="faq section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+                <div class="row  d-flex align-items-stretch">
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up">
+                        <h4>Non consectetur a erat nam at lectus urna duis?</h4>
+                        <p>
+                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <h4>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h4>
+                        <p>
+                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <h4>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</h4>
+                        <p>
+                            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
+                        <p>
+                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
+                        <p>
+                            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <h4>Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor?</h4>
+                        <p>
+                            Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>-->
+        <!-- End Frequently Asked Questions Section -->
+        <!-- ======= Contact Us Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Cont&aacute;ctenos</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-box">
+                            <i class="bx bx-envelope"></i>
+                            <h3>Correo Electr&oacute;nico</h3>
+                            <p>secarsoluciones@secarsoluciones.cl</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="info-box ">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>Tel&eacute;fono</h3>
+                            <p>+56 9 489 953 77</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="form-row">
+                            <div class="col-lg-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Tu Correo" />
+                                <div class="validate"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" />
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tu Mensaje"></textarea>
+                        </div>
+                        <div class="text-center"><button class="btn btn-primary" onclick="javascript: ProcesarSolContact();">Enviar Mensaje</button></div>
+                        <div class="text-center" style="padding-top:20px">
+                            <img src="~/img/logo_415_209.png" alt="secar soluciones SPA | Chile" class="img-fluid" />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Contact Us Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 footer-info">
+                        <h3>Secar Soluciones SPA</h3>
+                        <p>
+                            <strong>Tel&eacute;fono:</strong> +56 9 489 953 77<br>
+                            <strong>Email:</strong> secarsoluciones@secarsoluciones.cl<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="javascript:mensaje('Alerta', 'Funcionalidad no disponible');" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="javascript:mensaje('Alerta', 'Funcionalidad no disponible');" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=56948995377"><i class="icofont-brand-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#header">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">Nuestra Empresa</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about-lists">Tecnolog&iacute;a</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Servicios</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <h4>Otros Servicios</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="javascript:mensaje('Alerta', 'Funcionalidad no disponible');">Desarrollo de p&aacute;ginas Web</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="javascript:mensaje('Alerta', 'Funcionalidad no disponible');">Hosting</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="javascript:mensaje('Alerta', 'Funcionalidad no disponible');">Consultor&iacute;as</a></li>
+                        </ul>
+                    </div>
+
+                    @*<div class="col-lg-4 col-md-6 footer-newsletter">
+                            <h4>Informacion de interes</h4>
+                            <p>Suscribase a las informaciones de interes tecnologico</p>
+                            <form action="" method="post">
+                                <input type="email" name="email"><input type="submit" onclick="javascript:mensaje('Alerta', 'Funcionalidad no disponible');" value="Subscribe">
+                            </form>
+
+                        </div>*@
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Secar Soluciones <strong><span>SPA</span></strong>. Todos los derechos reservados 2020
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
+                Desarrollo por <a href="https://www.secarsoluciones.cl">Secar Soluciones SPA</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><label id="tituloMensaje"></label></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="divcontenidoMensaje"></div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCerrarPopUp" type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+    <script src="~/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="~/vendor/venobox/venobox.min.js"></script>
+    <script src="~/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/vendor/counterup/counterup.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/js/main.js"></script>
+    <script type="text/javascript">
+
+       function EnviarSolContacto() {
+
+            var result;
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var subject = $("#subject").val();
+            var message = $("#message").val();
+
+            $.ajax({
+                method: "POST",
+                url: "@Url.Action("EnviarSolicitud", "Home")",
+                async:false,
+                data: { correo: email, nombre: name, mensaje: message, asunto: subject},
+                success: function (data) {
+                    result = data;
+
+                }
+            });
+
+            return result;
+
+        }
+
+        function ProcesarSolContact() {
+            if (validarFormContacto()) {
+                var result = EnviarSolContacto();
+                if (result) {
+                    limpiarControles();
+                    mensaje("Información", "Solicitud enviada correctamente");
+                }
+                else {
+                    mensaje("Alerta", "Solicitud no fue posible procesar");
+                }
+            }
+        }
+
+        function limpiarControles() {
+            $("#name").val("");
+            $("#email").val("");
+            $("#subject").val("");
+            $("#message").val("");
+        }
+
+        function validarFormContacto() {
+
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var subject = $("#subject").val();
+            var message = $("#message").val();
+
+            if (name === "") {
+                mensaje("Alerta", "Debes ingresar tú nombre");
+                return false;
+            }
+
+            if (email === "") {
+                mensaje("Alerta", "Debes ingresar tú email");
+                return false;
+            }
+
+            if (subject === "") {
+                mensaje("Alerta", "Debes ingresar el asunto");
+                return false;
+            }
+
+            if (message === "") {
+                mensaje("Alerta", "Debes ingresar tú mensaje");
+                return false;
+            }
+
+            return true;
+
+
+        }
+
+
+        function mensaje(titulo, mensaje,redireccionContacto = false, id = 0) {
+
+            $("#tituloMensaje").text(titulo);
+            $("#divcontenidoMensaje").empty();
+            $("#divcontenidoMensaje").append(mensaje);
+            OpenMensaje();
+        }
+
+        function Contacto(id) {
+            cargarContacto(id);
+            CloseMensaje();
+        }
+
+        function OpenMensaje() {
+            $("#exampleModal").modal('show');
+        }
+
+        function CloseMensaje() {
+            $("#exampleModal").modal('hide');
+        }
+
+        function Pagos() {
+
+            window.location.href = '/Suscripcion/Buscador';
+        }
+
+        function RutPago() {
+            $("#modalRutPago").modal('show');
+        }
+
+        function BuscadorServicio() {
+            alert('valido');
+        }
+
+        function PagoCliente() {
+            window.location.href='@Url.Action("Index", "PagoCliente")';
+        }
+    </script>
+</body>
+</html>

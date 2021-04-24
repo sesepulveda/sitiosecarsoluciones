@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es-cl">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Desarrollo de software hosting  | secar soluciones Chile </title>
+</head>
+<body>
+    <div>
+        
+            <form action="@ViewBag.UrlRedirection" method="post" id="formReturn">
+                <input type="hidden" name="token_ws" value="@ViewBag.TokenWs" />
+            </form>
+            <script>
+
+                var codigo = @ViewBag.ResponseCode;
+
+                window.localStorage.clear();
+                window.localStorage.setItem("respondeCode",@ViewBag.ResponseCode);
+                window.localStorage.setItem("nroOrden",@ViewBag.NroOrden); 
+                window.localStorage.setItem("rutCliente", @ViewBag.RutCliente);
+
+                if (codigo == 0) {
+                    window.localStorage.setItem("authorizationCode", @ViewBag.AuthorizationCode);
+                    window.localStorage.setItem("amount", "@ViewBag.Amount");
+                    window.localStorage.setItem("cardNumber", @ViewBag.CardNumber);
+                    window.localStorage.setItem("cardExpirationDate", @ViewBag.CardExpirationDate);
+                    window.localStorage.setItem("accountingDate", @ViewBag.AccountingDate);
+                    window.localStorage.setItem("transaccionDate", "@ViewBag.TransaccionDate");
+                    window.localStorage.setItem("vci", "@ViewBag.Vci");
+                    window.localStorage.setItem("paymentTypeCode", "@ViewBag.PaymentTypeCode");
+                    window.localStorage.setItem("sharesNumber", @ViewBag.SharesNumber);
+                    window.localStorage.setItem("commerceCode", @ViewBag.CommerceCode);
+                    window.localStorage.setItem("commerce", "@ViewBag.Commerce");
+                    window.localStorage.setItem("service", "@ViewBag.Service");
+                    window.localStorage.setItem("descPaymentTypeCode", "@ViewBag.DescPaymentTypeCode");                    
+                }
+
+                document.getElementById('formReturn').submit();
+            </script>
+        
+
+    </div>
+
+</body>
+</html>

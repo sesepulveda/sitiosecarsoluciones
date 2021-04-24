@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @if (ViewBag.Produccion == 1)
+    {
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55339847-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-55339847-3');
+        </script>
+    }
+
+
+    <script src="~/js/home.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Desarrollo de software hosting  | secar soluciones Chile </title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <link href="~/img/logo_200_100.png" rel="icon">
+    <link href="~/img/logo_200_100.png" rel="logo_200_100">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <main id="main">
+        <section class="about">
+            <div class="container">
+
+                <div class="row no-gutters">
+
+                    <div class="col-lg-12 d-flex flex-column justify-content-center about-content">
+
+                        <div class="section-title">
+                            <h2>Pago de Servicio</h2>
+                        </div>
+
+                        <div class="icon-box aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                            <p>
+                                Hola! a continuaci&oacute;n ingrese la informacion de su empresa para pagar su servicio informatico, para poder
+                                buscar su informaci&oacute;n ingrese el rut de su empresa.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-12">&nbsp;</div>
+                            <div class="col-md-4 col-12">
+                                <label class="col-12">Rut empresa</label>
+                                <input type="text" maxlength="12" class="form-control" />
+                            </div>
+                            <div class="col-md-4 col-12">&nbsp;</div>
+                        </div>
+                        <div class="row p-2 text-center">
+                            <div class="col-md-4 col-12">&nbsp;</div>
+                            <div class="col-md-4 col-12">                                
+                                <input type="button" class="btn btn-primary" onclick="javascript:Pagar()" value="Buscar" />
+                            </div>
+                            <div class="col-md-4 col-12">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <img src="~/img/logo_415_209.png" class="img-fluid" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript">
+        function Pagar() {
+
+            window.location.href = '/Suscripcion/PagoCliente';
+        }
+    </script>
+</body>
+</html>

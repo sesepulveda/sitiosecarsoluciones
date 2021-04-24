@@ -1,0 +1,155 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es-cl">
+<head>
+    @if (ViewBag.Produccion == 1)
+    {
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55339847-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-55339847-3');
+        </script>
+    }
+
+
+    <script src="~/js/home.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Desarrollo de software hosting  | secar soluciones Chile </title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <link href="~/img/logo_200_100.png" rel="icon">
+    <link href="~/img/logo_200_100.png" rel="logo_200_100">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <main id="main">
+        <section id="topbar" class="d-none d-lg-block">
+            <div class="container clearfix">
+                <div class="contact-info float-left">
+                    <i class="icofont-envelope"></i><a href="mailto:secarsoluciones@secarsoluciones.cl">secarsoluciones@secarsoluciones.cl</a>
+                    <i class="icofont-phone"></i> +56 9 489 953 77
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-lg-12 d-flex flex-column justify-content-center about-content">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <img src="~/img/logo_415_209.png" class="img-fluid" style="max-width:300px" />
+                            </div>
+                        </div>
+                        <div class="section-title">
+                            <h2>Detalle Pago</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12">Nro. Documento</label>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12"><strong>@ViewBag.BuyOrden</strong></label>
+                            </div>
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12">Comercio</label>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12"><strong>@ViewBag.Comercio</strong></label>
+                            </div>
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12">Monto</label>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12"><strong>@ViewBag.Amount</strong></label>
+                            </div>
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12">Vencimento</label>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12"><strong>@ViewBag.Vencimiento</strong></label>
+                            </div>
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12">Servicio</label>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <label class="col-12"><strong>@ViewBag.Servicio</strong></label>
+                            </div>
+                            <div class="col-md-3 col-12">&nbsp;</div>
+                        </div>
+                        <div class="row p-md-3">
+                            <div class="col-12 text-center">
+                                <div class="row">
+                                    <div class="col-md-6 col-12 text-md-right text-center p-md-3">
+                                        <form action="@ViewBag.FormAction" method="post">
+                                            <input type="hidden" name="token_ws" value="@ViewBag.TokenWs" />
+                                            <button type="submit" class="btn btn-danger btn-round" style="min-width:150px !important">Realizar Pago</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6 col-12 text-md-left text-center p-md-3 p-1">
+                                        <input type="button" class="btn btn-danger btn-round" onclick="javascript: VolverBuscador();" value="Volver" style="min-width:150px !important" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <img src="~/img/webpay-plus.png" class="img-fluid" style="max-width:200px" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        function VolverBuscador() {
+            var vista = "/PagoCliente/Buscador?cliente=" + @ViewBag.RutCliente;
+            window.location.href = vista;
+        }
+    </script>
+</body>
+</html>

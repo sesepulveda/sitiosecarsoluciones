@@ -1,0 +1,175 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es-cl">
+<head>
+    @if (ViewBag.Produccion == 1)
+    {
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55339847-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-55339847-3');
+        </script>
+    }
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Desarrollo de software hosting  | secar soluciones Chile </title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <link href="~/img/logo_200_100.png" rel="icon">
+    <link href="~/img/logo_200_100.png" rel="logo_200_100">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/style.css" rel="stylesheet">
+
+
+
+    <!-- =======================================================
+    * Template Name: Mamba - v2.0.1
+    * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body>
+    <section id="topbar" class="d-none d-lg-block">
+        <div class="container clearfix">
+            <div class="contact-info float-left">
+                <i class="icofont-envelope"></i><a href="mailto:secarsoluciones@secarsoluciones.cl">secarsoluciones@secarsoluciones</a>
+                <i class="icofont-phone"></i> +56 9 489 953 77
+            </div>
+        </div>
+    </section>
+    <section id="empresa" class="about">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-12 d-flex flex-column justify-content-center about-content">
+                    <div class="section-title">
+                        <div class="row p-md-3">
+                            <div class="col-12 text-center">
+                                <img src="~/img/logo_415_209.png" class="img-fluid" style="max-width:300px" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 col-12">
+                                &nbsp;
+                            </div>
+                            <div class="col-md-8 col-12">
+                                <div class="table-responsive-sm">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td>Nro. Orden</td>
+                                                <td>Servicio</td>
+                                                <td>Fecha Documento</td>
+                                                <td>Monto</td>
+                                                <td>Estado</td>
+                                                <td>Opci&oacute;n</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (ViewBag.Facturacion.Count > 0)
+                                            {
+                                                foreach (var info in ViewBag.Facturacion)
+                                                {
+                                                    <tr>
+                                                        <td>@info.IdFacturacion</td>
+                                                        <td>@info.Servicio</td>
+                                                        <td>@info.FechaDocumento</td>
+                                                        <td>@info.Monto</td>
+                                                        <td>@info.Estado</td>
+                                                        <td>
+                                                            @if (info.Estado != "Pendiente")
+                                                            {
+                                                                <label>--</label>
+                                                            }
+                                                            else
+                                                            {
+                                                                <input type="button" class="btn btn-danger btn-sm btn-round" onclick="javascript: Confirmar(@info.IdFacturacion);" value="Pagar" />
+                                                            }
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="6">
+                                                        Usted no posee facturaciones generadas!
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-12">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-12 text-center">
+                                <input type="button" class="btn btn-danger btn-round" style="min-width:150px !important" value="Salir" onclick="javascript: Volver();" />
+                            </div>
+                        </div>
+                        <div class="row p-md-4">
+                            <div class="col-12 text-center">
+                                <img src="~/img/webpay-plus.png" class="img-fluid" style="max-width:300px" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Vendor JS Files -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+    <script src="~/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="~/vendor/venobox/venobox.min.js"></script>
+    <script src="~/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/vendor/counterup/counterup.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/aos/aos.js"></script>
+    <script src="~/js/main.js"></script>
+
+
+    <script type="text/javascript">
+
+
+        function Volver() {
+            window.location.href = '@Url.Action("Index", "Home")';
+        }
+
+        function Confirmar(id) {
+            var vista = "/Suscripcion/PagoCliente?id=" + id;
+            window.location.href = vista;
+        }
+
+    </script>
+</body>
+</html>
